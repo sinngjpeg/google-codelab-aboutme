@@ -1,110 +1,126 @@
-﻿# 👤 About Me 
+# 👤 About Me – Android Codelab (Views + View Binding)
 
-Este é o repositório do **Codelab Oficial do Google** para criar um app simples de “About Me” usando **Jetpack Compose**: a biblioteca declarativa de UI para Android.
+Este projeto é uma implementação do **Codelab oficial do Google – About Me**, desenvolvido com **Kotlin**, **Views tradicionais (XML)** e **View Binding**.
 
+O objetivo do app é demonstrar conceitos básicos do desenvolvimento Android, como:
+
+- Manipulação de Views
+- Uso de View Binding
+- Eventos de clique
+- Atualização dinâmica da UI
+- Controle do teclado (InputMethodManager)
+
+> ❗ Este projeto **não utiliza Jetpack Compose**.
+
+---
 
 ## 📸 Demonstração
 
-> Exemplo visual do app:
+Exemplo do app em execução:
 
-![Exemplo do About Me App](screen.png)
-
+![About Me App Screenshot](screen.png)
 ---
 
-## 📌 Descrição
+## 📱 Sobre o App
 
-O app **About Me** é um projeto de introdução ao **Jetpack Compose**, onde você aprende a:
+O app exibe:
 
-✔️ Usar componentes básicos do Compose  
-✔️ Lidar com estados mutáveis  
-✔️ Construir layouts flexíveis  
-✔️ Atualizar UI em resposta a eventos do usuário
+- Nome do usuário
+- Campo para digitar um apelido
+- Botão **Done** para confirmar
 
-É um ótimo projeto inicial antes de avançar para apps mais complexos com Compose.
+### 🎯 Comportamento
 
----
+1. O usuário digita um apelido
+2. Ao clicar em **Done**:
+   - O apelido é exibido na tela
+   - O campo de texto e o botão são ocultados
+   - O teclado virtual é fechado automaticamente
 
-## 🛠 Pré-requisitos
+Esse comportamento é controlado no método:
 
-Antes de rodar o projeto localmente, você precisa ter:
+```kotlin
+private fun addNickname(view: View)
+```
 
-✔️ **Android Studio Flamingo / Electric Eel ou versão superior**  
-✔️ **SDK Android atualizado**  
-✔️ **Kotlin Plugin habilitado**  
-✔️ **JDK 11+ compatível com o Android Studio**  
-✔️ **Emulador Android configurado ou dispositivo físico com depuração**
+🧠 Conceitos Trabalhados
 
-> O Jetpack Compose é atualizado com frequência — manter suas ferramentas atualizadas garante que o projeto sempre compile.
+- ✔️ View Binding
+- ✔️ Manipulação de visibilidade de Views
+- ✔️ Eventos de clique (setOnClickListener)
+- ✔️ Uso de InputMethodManager para esconder o teclado
+- ✔️ Organização de código com apply {}
 
----
+🛠 Tecnologias Utilizadas
 
-## 🚀 Como Rodar o Projeto
+- Kotlin
+- Android SDK
+- Views (XML)
+- View Binding
+- ConstraintLayout
 
-### 1. Clone o repositório
+### 🚀 Como Rodar o Projeto (Funciona Mesmo no Futuro)
+✅ Pré-requisitos
 
-Abra um terminal e execute:
+Tenha instalado:
 
-```bash
+- Android Studio Giraffe ou superior
+- SDK Android atualizado
+- JDK 11+ (gerenciado automaticamente pelo Android Studio)
+- Emulador Android configurado ou dispositivo físico com depuração USB
+
+💡 O projeto utiliza Gradle Wrapper, garantindo compatibilidade mesmo com versões futuras do Android Studio.
+
+1️⃣ Clone o repositório
+````
 git clone https://github.com/sinngjpeg/google-codelab-aboutme.git
 cd google-codelab-aboutme
-```
+````
 
-2. Abra no Android Studio
+2️⃣ Abra no Android Studio
 
-1. Inicie o Android Studio.
-2. Escolha Open an existing project.
-3. Selecione a pasta do projeto que você clonou.
+- Abra o Android Studio
+- Clique em Open
+- Selecione a pasta do projeto
 
-O Android Studio irá detectar o Gradle e baixar automaticamente todas as dependências.
+3️⃣ Aguarde o Gradle Sync
 
-### 3. Sincronize o Gradle
+O Android Studio irá automaticamente:
 
-Quando o projeto abrir:
+- Baixar dependências
+- Configurar o Gradle correto
+- Preparar o ambiente de build
 
-- Aguarde o Gradle Sync finalizar
-- Caso seja solicitado, aceite o download de componentes adicionais
+Se aparecer algum aviso, basta aceitar as recomendações do próprio Android Studio.
 
-Isso garante que o projeto compile mesmo que o tempo passe.
+4️⃣ Execute o App
 
-### 4. Configure o Dispositivo
-
-Escolha onde quer rodar o app:
-
-- ✔️ Emulador Android configurado pelo AVD
-- ✔️ Dispositivo físico com depuração USB ativada
-
-### 5. Execute o App
-
-No Android Studio:
-
-- Clique no botão Run ▶️
+- Escolha um emulador ou dispositivo físico
+- Clique em Run ▶
 - Ou use o atalho Shift + F10
 
-O app será construído, instalado e iniciado no dispositivo/emulador escolhido.
+O app será instalado e iniciado automaticamente.
 
-## 📁 Estrutura do Projeto
-```bash
+### 📂 Estrutura do Projeto
+````
 .
-├── app/                      # Código principal do app
-│   ├── src/main/java/…       # Código Kotlin
-│   ├── src/main/res/…        # Layouts e recursos
-│   └── build.gradle.kts      # Configurações do módulo app
-├── build.gradle.kts          # Gradle de nível raiz
-├── settings.gradle.kts
-├── .gitignore
+├── app/
+│   ├── src/main/java/com/sinngjpeg/aboutme/
+│   │   ├── MainActivity.kt
+│   │   └── MyName.kt
+│   ├── src/main/res/
+│   │   ├── layout/
+│   │   ├── values/
+│   │   └── drawable/
+│   └── build.gradle
+├── gradle/
+├── build.gradle
+├── settings.gradle
 └── README.md
-```
+````
 
-### 🧠 O Que Você Vai Aprender
+### 📚 Recursos Oficiais
 
-- ✔️ Criar componentes com @Composable
-- ✔️ Uso de remember para estados mutáveis
-- ✔️ Composições simples de UI (Text, Button, Image)
-- ✔️ Organizar elementos em layout com Column/Row
-
-### 📚 Recursos Úteis
-
-- 🔗 [Documentação oficial do Jetpack Compose](https://developer.android.com/jetpack/compose)
-
-- 🔗 [Codelabs Android por Google](https://developer.android.com/codelabs)
-
+- [Android Developers](https://developer.android.com)
+- [View Binding](https://developer.android.com/topic/libraries/view-binding)
+- [Codelabs Android](https://developer.android.com/codelabs)
