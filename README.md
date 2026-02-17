@@ -1,8 +1,7 @@
-﻿# 👤 About Me – Jetpack Compose Codelab
+﻿# 👤 About Me 
 
-Este é o repositório do **Codelab Oficial do Google** para criar um app simples de “About Me” usando **Jetpack Compose** : a biblioteca declarativa de UI para Android.
+Este é o repositório do **Codelab Oficial do Google** para criar um app simples de “About Me” usando **Jetpack Compose**: a biblioteca declarativa de UI para Android.
 
----
 
 ## 📸 Demonstração
 
@@ -108,3 +107,4 @@ O app será construído, instalado e iniciado no dispositivo/emulador escolhido.
 - 🔗 [Documentação oficial do Jetpack Compose](https://developer.android.com/jetpack/compose)
 
 - 🔗 [Codelabs Android por Google](https://developer.android.com/codelabs)
+
